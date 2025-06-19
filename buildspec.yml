@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - npm install -g bower
+      - npm install || true
+      - bower install --allow-root
+  build:
+    commands:
+      - echo "No build step for AngularJS 1.x"
+artifacts:
+  files:
+    - '**/*'
+  base-directory: .
